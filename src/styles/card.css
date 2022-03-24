@@ -1,0 +1,13 @@
+.card {
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    row-gap: 10px;
+    justify-content: flex-end;
+}
+.cardTitle {
+    display:flex;
+    justify-content: center;
+    font-weight: 900;
+    color:rgb(250, 0, 50)
+}
