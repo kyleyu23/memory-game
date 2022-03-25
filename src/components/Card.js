@@ -1,31 +1,27 @@
-import React, { useState } from "react";
 import '../styles/card.css'
 
 export default function Card(props) {
 
-    const handleClick = () => {
-        // console.log("before", props);
-        props.shuffle();
+    const { shuffleCards, handleCardOnClick, img, name } = props;
 
-        if (props.clicked) {
-            props.resetGame();
-        } else {
-            props.incrementScore();
-        }
+    const handleClick = (e) => {
+        const card = e.currentTarget.id;
+        const cardElement = e.currentTarget;
+        handleCardOnClick(card, cardElement);
 
-        props.reverseClicked();
-
-        // console.log("after", props);
-
+        shuffleCards();
     }
 
     return (
         <div
             className="card"
-            onClick={handleClick}
+            onClick={(e) => handleClick(e)}
+            id={name}
         >
-            <img src={props.img} alt={props.name}></img>
-            <div className="cardTitle">{props.name}</div>
+            <img src={img} alt={name}></img>
+
+            <div className="cardTitle">{name}</div>
+
         </div>
     )
 }

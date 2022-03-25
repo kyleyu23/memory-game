@@ -26,17 +26,30 @@ export default function App() {
         setCardsSelected((prevCards) => [...prevCards, card]);
     }
 
-    const handleCardOnClick = (card) => {
+    const addWinEffect = (cardElement) => {
+        // cardElement.classList.add("correct");
+    }
+
+    const addLoseEffect = (cardElement) => {
+        // cardElement.classList.add("wrong");
+    }
+
+    const handleCardOnClick = (card, cardElement) => {
 
         // console.log(cardsSelected, card);
 
         if (cardsSelected.includes(card)) {
+            //lose
+            addLoseEffect(cardElement);
             resetGame();
             handleHighScore();
         } else {
+            //win
+            addWinEffect(cardElement);
             addSelectedCard(card);
             incrementScore();
         }
+
     }
 
     return (

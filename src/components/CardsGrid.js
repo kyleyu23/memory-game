@@ -24,15 +24,14 @@ const DEFAULT_CARS = [
     { name: "Honda S2000", img: S2000 },
     { name: "Mitsubishi Lancer Evolution III", img: EVO3 },
     { name: "Mitsubishi Lancer Evolution VII", img: EVO7 },
-    { name: "Toyota MR2", img: MR2 },
+    { name: "Toyota MR2", img: MR2 }
 ]
-//add .clicked to each car
-const MAPPED_DEFAULT_CARS = DEFAULT_CARS.map(car => ({ ...car, clicked: false }));
 
 export default function CardsGrid(props) {
 
-    const [cars, setCars] = useState(MAPPED_DEFAULT_CARS);
+    const handleCardOnClick = props.handleCardOnClick;
 
+    const [cars, setCars] = useState(DEFAULT_CARS);
 
     const shuffleArray = (array) => {
         let shuffledArray = array.slice();
@@ -48,22 +47,15 @@ export default function CardsGrid(props) {
         setCars(shuffleArray(cars));
     };
 
-    const reverseClicked = (car) => {
-        // TO DO
-    }
-
-
     return (
         <div className="cardsGrid">
             {cars.map(car => (
                 <Card
                     name={car.name}
+                    key={car.name}
                     img={car.img}
-                    shuffle={shuffleCards}
-                    incrementScore={props.incrementScore}
-                    resetGame={props.resetGame}
-                    reverseClicked={() => reverseClicked(car)}
-                    clicked={car.clicked}
+                    shuffleCards={shuffleCards}
+                    handleCardOnClick={handleCardOnClick}
                 />
             ))}
         </div>

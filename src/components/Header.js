@@ -2,6 +2,9 @@ import React from "react";
 import '../styles/header.css'
 
 export default function Header(props) {
+
+    const { score, highScore } = props;
+
     return (
         <div className="header">
             <div className="left-header">
@@ -18,10 +21,10 @@ export default function Header(props) {
 
             <div className="right-header yellow">
                 <div>
-                    {`Score: ${props.score}`}
+                    {`Score: ${score}`}
                 </div>
                 <div>
-                    {`Best: ${props.highScore}`}
+                    {`Best: ${highScore}`}
                 </div>
             </div>
 
