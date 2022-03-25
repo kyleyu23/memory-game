@@ -5,33 +5,44 @@ import CardsGrid from './components/CardsGrid'
 export default function App() {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
+    const [cardsSelected, setCardsSelected] = useState([]);
 
     const incrementScore = () => {
         setScore(score + 1);
     }
 
     const resetGame = () => {
+        setScore(0);
+        setCardsSelected([]);
+    }
 
+    const handleHighScore = () => {
         if (score > highScore) {
             setHighScore(score);
         }
+    }
 
-        setScore(0);
+    const addSelectedCard = (card) => {
+        setCardsSelected((prevCards) => [...prevCards, card]);
+    }
 
+    const handleCardOnClick = (card) => {
+
+        // console.log(cardsSelected, card);
+
+        if (cardsSelected.includes(card)) {
+            resetGame();
+            handleHighScore();
+        } else {
+            addSelectedCard(card);
+            incrementScore();
+        }
     }
 
     return (
         <div className="content">
-            <Header
-                score={score}
-                highScore={highScore}
-            />
-            <CardsGrid
-                score={score}
-                incrementScore={incrementScore}
-                resetGame={resetGame}
-            />
-
+            <Header score={score} highScore={highScore} />
+            <CardsGrid handleCardOnClick={handleCardOnClick} />
         </div>
     )
 }
