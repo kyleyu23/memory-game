@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.556c67bc.css",
+    "main.js": "/static/js/main.fc02fc80.js",
+    "static/js/787.69b12325.chunk.js": "/static/js/787.69b12325.chunk.js",
+    "static/media/Keisuke_FD3S_Fifth_Stage_Upgraded.webp": "/static/media/Keisuke_FD3S_Fifth_Stage_Upgraded.f05bd25fbf178469ae0b.webp",
+    "static/media/Kyoichi_Evo_III_Final_Stage.webp": "/static/media/Kyoichi_Evo_III_Final_Stage.a25a3f1ff7bb97b7a1c4.webp",
+    "static/media/Fifth_Stage_Eight-Six.webp": "/static/media/Fifth_Stage_Eight-Six.3804868eee8b0f5f9ec4.webp",
+    "static/media/Team_246_Lan_EVO_VII_Ingame.webp": "/static/media/Team_246_Lan_EVO_VII_Ingame.57ff71d9db2b8b8491d8.webp",
+    "static/media/Ryosuke_FC3S_Third_Stage.webp": "/static/media/Ryosuke_FC3S_Third_Stage.6cba5c7fd5e7474503af.webp",
+    "static/media/Kogashiwa_MR2_Third_Stage.webp": "/static/media/Kogashiwa_MR2_Third_Stage.aeb1fefff4381e1b9a2c.webp",
+    "static/media/Nakazato_R32_New_Initial_D.webp": "/static/media/Nakazato_R32_New_Initial_D.9fe252686499d30e5e00.webp",
+    "static/media/Bunta_Impreza_Fourth_Stage.webp": "/static/media/Bunta_Impreza_Fourth_Stage.1b14b23b2c7b6b3ba1eb.webp",
+    "static/media/SilEighty_Extra_Stage_2.webp": "/static/media/SilEighty_Extra_Stage_2.ca60b921ae56e2313c4f.webp",
+    "static/media/Joshima_S2000_Fourth_Stage.webp": "/static/media/Joshima_S2000_Fourth_Stage.80c4406c7a73dbdbd447.webp",
+    "index.html": "/index.html",
+    "main.556c67bc.css.map": "/static/css/main.556c67bc.css.map",
+    "main.fc02fc80.js.map": "/static/js/main.fc02fc80.js.map",
+    "787.69b12325.chunk.js.map": "/static/js/787.69b12325.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.556c67bc.css",
+    "static/js/main.fc02fc80.js"
+  ]
+}
