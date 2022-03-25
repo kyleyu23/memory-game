@@ -1,5 +1,9 @@
 .cardsGrid{
     display:flex;
     gap:10px;
+    flex-wrap: wrap;
+    /* outline:red solid 4px; */
+    justify-content: center;
+    align-items: center;
 
 }

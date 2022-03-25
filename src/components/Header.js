@@ -12,7 +12,7 @@ export default function Header(props) {
                     </i>
                     Memory Game
                 </div>
-                <p className="yellow">Click on a different card every round to score</p>
+                <p className="yellow">Get points by clicking on an image, but not more than once</p>
                 <br />
             </div>
 
