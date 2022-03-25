@@ -28,7 +28,6 @@ const INITIAL_CARS = [
 ]
 
 export default function CardsGrid(props) {
-    // const [currentScore,setCurrentScore] = useState(0);
 
     const [cars, setCars] = useState(INITIAL_CARS);
 
@@ -42,16 +41,9 @@ export default function CardsGrid(props) {
 
     };
 
-    const shuffleCards = (array) => {
-        setCars(shuffleArray(array));
+    const shuffleCards = () => {
+        setCars(shuffleArray(cars));
     };
-
-    const handleClick = () => {
-        shuffleCards(cars);
-        // setCurrentScore(currentScore);
-        // setHighScore(currentScore, highScore);
-    };
-
 
 
     return (
@@ -60,9 +52,10 @@ export default function CardsGrid(props) {
                 <Card
                     name={car.name}
                     img={car.img}
-                    handleClick={handleClick}
+                    shuffle={shuffleCards}
+                    incrementScore={props.incrementScore}
+                    resetGame={props.resetGame}
                 />
-
             ))}
         </div>
 

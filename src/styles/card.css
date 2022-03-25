@@ -1,5 +1,5 @@
 .card > img {
-    width: 22vw;
+    width: 20vw;
     height:auto;
     margin-inline: 10px;
     margin-top: 10px;
@@ -22,7 +22,7 @@
     outline-width: 4px;
     outline-style: solid;
     outline-color: aliceblue;
-
+    cursor: pointer;
 }
 
 .cardTitle {

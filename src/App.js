@@ -6,6 +6,20 @@ export default function App() {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
 
+    const incrementScore = () => {
+        setScore(score + 1);
+    }
+
+    const resetGame = () => {
+
+        if (score > highScore) {
+            setHighScore(score);
+        }
+
+        setScore(0);
+
+    }
+
     return (
         <div className="content">
             <Header
@@ -13,7 +27,9 @@ export default function App() {
                 highScore={highScore}
             />
             <CardsGrid
-
+                score={score}
+                incrementScore={incrementScore}
+                resetGame={resetGame}
             />
 
         </div>
