@@ -14,7 +14,7 @@ import EVO3 from '../media/Kyoichi_Evo_III_Final_Stage.webp';
 import EVO7 from '../media/Team_246_Lan_EVO_VII_Ingame.webp';
 import MR2 from '../media/Kogashiwa_MR2_Third_Stage.webp';
 
-const INITIAL_CARS = [
+const DEFAULT_CARS = [
     { name: "Subaru Impreza WRX STi", img: WRX },
     { name: "Toyota Corolla AE86", img: AE86 },
     { name: "Mazda RX-7 FD3S", img: FD },
@@ -26,10 +26,13 @@ const INITIAL_CARS = [
     { name: "Mitsubishi Lancer Evolution VII", img: EVO7 },
     { name: "Toyota MR2", img: MR2 },
 ]
+//add .clicked to each car
+const MAPPED_DEFAULT_CARS = DEFAULT_CARS.map(car => ({ ...car, clicked: false }));
 
 export default function CardsGrid(props) {
 
-    const [cars, setCars] = useState(INITIAL_CARS);
+    const [cars, setCars] = useState(MAPPED_DEFAULT_CARS);
+
 
     const shuffleArray = (array) => {
         let shuffledArray = array.slice();
@@ -45,6 +48,10 @@ export default function CardsGrid(props) {
         setCars(shuffleArray(cars));
     };
 
+    const reverseClicked = (car) => {
+        // TO DO
+    }
+
 
     return (
         <div className="cardsGrid">
@@ -55,6 +62,8 @@ export default function CardsGrid(props) {
                     shuffle={shuffleCards}
                     incrementScore={props.incrementScore}
                     resetGame={props.resetGame}
+                    reverseClicked={() => reverseClicked(car)}
+                    clicked={car.clicked}
                 />
             ))}
         </div>
