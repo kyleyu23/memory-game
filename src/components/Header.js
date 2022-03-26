@@ -20,7 +20,7 @@ export default function Header(props) {
             </div>
 
             <div className="right-header yellow">
-                <div>
+                <div id="score">
                     {`Score: ${score}`}
                 </div>
                 <div>

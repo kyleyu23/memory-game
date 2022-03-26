@@ -32,3 +32,11 @@
     font-weight: 900;
     color:rgb(250, 0, 50);
 }
+
+.win {
+    outline-color: green; 
+}
+
+.lose {
+    outline-color: green; 
+}

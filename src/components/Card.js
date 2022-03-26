@@ -6,8 +6,8 @@ export default function Card(props) {
 
     const handleClick = (e) => {
         const card = e.currentTarget.id;
-        const cardElement = e.currentTarget;
-        handleCardOnClick(card, cardElement);
+        // const cardElement = e.currentTarget;
+        handleCardOnClick(card);
 
         shuffleCards();
     }
