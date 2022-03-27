@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from './components/Header';
 import CardsGrid from './components/CardsGrid'
 
@@ -6,7 +6,6 @@ export default function App() {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [cardsSelected, setCardsSelected] = useState([]);
-
 
     const incrementScore = () => {
         setScore(score + 1);
@@ -43,7 +42,7 @@ export default function App() {
     return (
         <div className="content">
             <Header score={score} highScore={highScore} />
-            <CardsGrid handleCardOnClick={handleCardOnClick} />
+            <CardsGrid handleCardOnClick={handleCardOnClick} cardsSelected={cardsSelected} />
         </div>
     )
 }

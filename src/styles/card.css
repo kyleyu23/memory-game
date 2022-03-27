@@ -5,24 +5,23 @@
     margin-top: 10px;
 }
 .card {
-    outline: #e9d700 solid 1px;
+    outline: #e9d700 solid 4px;
     border-radius: 20px;
 
     display:flex;
     flex-direction:column;
-    row-gap: 2px;
     justify-content: center;
     align-items: center;
 
     min-height:250px;
 
+    transition: transform 500ms;
 }
 
 .card:hover{
-    outline-width: 4px;
-    outline-style: solid;
-    outline-color: aliceblue;
     cursor: pointer;
+    transform: translateY(-10px);
+    outline-color: aliceblue;
 }
 
 .cardTitle {
@@ -38,5 +37,5 @@
 }
 
 .lose {
-    outline-color: green; 
+    outline-color: red; 
 }

@@ -30,6 +30,7 @@ const DEFAULT_CARS = [
 export default function CardsGrid(props) {
 
     const handleCardOnClick = props.handleCardOnClick;
+    const cardsSelected = props.cardsSelected;
 
     const [cars, setCars] = useState(DEFAULT_CARS);
 
@@ -47,6 +48,10 @@ export default function CardsGrid(props) {
         setCars(shuffleArray(cars));
     };
 
+    function isCardSelected(car) {
+        return cardsSelected.includes(car.name);
+    }
+
     return (
         <div className="cardsGrid">
             {cars.map(car => (
@@ -54,6 +59,7 @@ export default function CardsGrid(props) {
                     name={car.name}
                     key={car.name}
                     img={car.img}
+                    isSelected={isCardSelected(car)}
                     shuffleCards={shuffleCards}
                     handleCardOnClick={handleCardOnClick}
                 />
