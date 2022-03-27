@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.b0273bde.css",
+    "main.css": "./static/css/main.c4399866.css",
     "main.js": "./static/js/main.72f3c530.js",
     "static/js/787.69b12325.chunk.js": "./static/js/787.69b12325.chunk.js",
     "static/media/Keisuke_FD3S_Fifth_Stage_Upgraded.webp": "./static/media/Keisuke_FD3S_Fifth_Stage_Upgraded.f05bd25fbf178469ae0b.webp",
@@ -14,12 +14,12 @@
     "static/media/SilEighty_Extra_Stage_2.webp": "./static/media/SilEighty_Extra_Stage_2.ca60b921ae56e2313c4f.webp",
     "static/media/Joshima_S2000_Fourth_Stage.webp": "./static/media/Joshima_S2000_Fourth_Stage.80c4406c7a73dbdbd447.webp",
     "index.html": "./index.html",
-    "main.b0273bde.css.map": "./static/css/main.b0273bde.css.map",
+    "main.c4399866.css.map": "./static/css/main.c4399866.css.map",
     "main.72f3c530.js.map": "./static/js/main.72f3c530.js.map",
     "787.69b12325.chunk.js.map": "./static/js/787.69b12325.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0273bde.css",
+    "static/css/main.c4399866.css",
     "static/js/main.72f3c530.js"
   ]
 }
